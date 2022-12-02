@@ -10,6 +10,7 @@ var solvers map[int]func()
 func init() {
 	solvers = map[int]func(){
 		1: Solve01,
+		2: Solve02,
 	}
 }
 
