@@ -11,6 +11,7 @@ func init() {
 	solvers = map[int]func(){
 		1: Solve01,
 		2: Solve02,
+		3: Solve03,
 	}
 }
 
