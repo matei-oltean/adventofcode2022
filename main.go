@@ -5,19 +5,20 @@ import (
 	"strconv"
 )
 
-var solvers map[int]func()
+var solvers map[int]func(string)
 
 func init() {
-	solvers = map[int]func(){
+	solvers = map[int]func(string){
 		1: Solve01,
 		2: Solve02,
 		3: Solve03,
+		4: Solve04,
 	}
 }
 
 func main() {
-	pb, _ := strconv.Atoi(os.Args[len(os.Args)-1])
-	if solver, ok := solvers[pb]; ok {
-		solver()
+	pb, _ := strconv.Atoi(os.Args[1])
+	if solver, ok := solvers[pb]; ok && len(os.Args) >= 3 {
+		solver(os.Args[2])
 	}
 }

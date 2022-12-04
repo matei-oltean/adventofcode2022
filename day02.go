@@ -9,9 +9,9 @@ import (
 	"unicode/utf8"
 )
 
-func Solve02() {
+func Solve02(input string) {
 	curdir, _ := os.Getwd()
-	file, _ := os.Open(filepath.Join(curdir, "inputs", "02"))
+	file, _ := os.Open(filepath.Join(curdir, "inputs", input))
 	defer file.Close()
 	countScore(file)
 }

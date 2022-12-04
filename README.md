@@ -2,5 +2,5 @@
 
 ```sh
 go build
-adventofcode2022 <day>
+adventofcode2022 <day> <input>
 ```

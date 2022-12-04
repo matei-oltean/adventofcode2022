@@ -18,9 +18,9 @@ func priority(r rune) int32 {
 	return r - A + 27
 }
 
-func Solve03() {
+func Solve03(input string) {
 	curdir, _ := os.Getwd()
-	file, _ := os.Open(filepath.Join(curdir, "inputs", "03"))
+	file, _ := os.Open(filepath.Join(curdir, "inputs", input))
 	defer file.Close()
 	countPriorities(file)
 }

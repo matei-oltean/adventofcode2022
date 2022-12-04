@@ -9,9 +9,9 @@ import (
 	"strconv"
 )
 
-func Solve01() {
+func Solve01(input string) {
 	curdir, _ := os.Getwd()
-	file, _ := os.Open(filepath.Join(curdir, "inputs", "01"))
+	file, _ := os.Open(filepath.Join(curdir, "inputs", "input"))
 	defer file.Close()
 	cals := countCal(file)
 	sort.Ints(cals)
