@@ -13,6 +13,7 @@ func init() {
 		2: Solve02,
 		3: Solve03,
 		4: Solve04,
+		5: Solve05,
 	}
 }
 
