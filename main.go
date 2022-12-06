@@ -14,6 +14,7 @@ func init() {
 		3: Solve03,
 		4: Solve04,
 		5: Solve05,
+		6: Solve06,
 	}
 }
 

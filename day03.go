@@ -9,7 +9,7 @@ import (
 	"unicode/utf8"
 )
 
-func priority(r rune) int32 {
+func Priority(r rune) int32 {
 	if unicode.IsLower(r) {
 		a, _ := utf8.DecodeRuneInString("a")
 		return r - a + 1
@@ -42,11 +42,11 @@ func countPriorities(file *os.File) {
 				counts[char] = empty
 			} else {
 				if _, ok := counts[char]; ok {
-					prio1 += priority(char)
+					prio1 += Priority(char)
 					delete(counts, char)
 				}
 			}
-			prio := priority(char)
+			prio := Priority(char)
 			if i == 0 {
 				intersects[prio] = empty
 			} else {
